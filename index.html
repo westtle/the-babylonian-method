@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="westtle" />
+    <meta name="description" content="The Babylonian square root algorithm made for uni project." />
+    <meta name="keywords" content="html, css, js, javascript, square root, babylonian, the babylonian square root algorithm, the babylonian method, hero's method" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Babylonian Method</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" type="image/x-icon" href="#" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+</head>
+<body>
+    <main>
+        <div class="the-babylonian-method">
+            <div class="title">
+                <h1 class="title__main-title">The Babylonian Method</h1>
+                <h2 class="title__subtitle">x<sub>n+1</sub> = (x<sub>n</sub> + s / x<sub>n</sub>) / 2</h2>
+            </div>
+            <form class="estimate" onsubmit="estimate(); openTable(); return false;">
+                <div class="estimate__inputs">
+                    <input class="inputs__square-root" type="number" placeholder="Square root to find... (s)" min="1" required />
+                    <input class="inputs__initial-guess" type="number" placeholder="Initial guess... (x0)" min="1" required />
+                </div>
+                <input class="estimate__estimate-button" type="submit" value="Estimate" />
+            </form>
+            <div class="result" aria-hidden="true" data-opened="false">
+                <header class="result__header"></header>
+                <div class="result__table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="table__first-column" scope="col">x<sub>?</sub></th>
+                                <th class="table__second-column" scope="col">Formula</th>
+                                <th class="table__third-column" scope="col">Result</th>
+                                <th class="table__fourth-column" scope="col">Error Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <footer class="result__footer"></footer>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="attribution">
+            <a href="https://github.com/westtle" target="_blank" rel="noopener">westtle</a> -
+            <a href="https://github.com/westtle/the-babylonian-method" target="_blank" rel="noopener">Repository</a>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/script.js"></script>
+</body>
+</html>
