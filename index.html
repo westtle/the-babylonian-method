@@ -25,8 +25,8 @@
             </div>
             <form class="estimate" onsubmit="estimate(); openTable(); return false;">
                 <div class="estimate__inputs">
-                    <input class="inputs__square-root" type="number" placeholder="Square root to find... (s)" min="1" required />
-                    <input class="inputs__initial-guess" type="number" placeholder="Initial guess... (x0)" min="1" required />
+                    <input class="inputs__square-root" type="number" placeholder="Square root to find... (s)" min="1" step="any" required />
+                    <input class="inputs__initial-guess" type="number" placeholder="Initial guess... (x0)" min="1" step="any" required />
                 </div>
                 <input class="estimate__estimate-button" type="submit" value="Estimate" />
             </form>
