@@ -28,10 +28,10 @@ function estimate() {
         errorRate = Math.abs(getErrorRate(squareRoot, approximate));
 
         // Generate result of each iteration one by one as a table.
-        generateTableRow(iteration, getFormula(squareRoot, approximate), getApprox(squareRoot, approximate), getErrorRate(squareRoot, approximate));
+        generateTableRow(iteration, getFormula(squareRoot, approximate), getNextApprox(squareRoot, approximate), getErrorRate(squareRoot, approximate));
         
         // Update approximate for next iteration.
-        approximate = getApprox(squareRoot, approximate);
+        approximate = getNextApprox(squareRoot, approximate);
 
     } while (errorRate > accuracy);
 
@@ -39,7 +39,7 @@ function estimate() {
     updateResultFooter(squareRoot, approximate);
 };
 
-function getApprox(squareRoot, approximate) {
+function getNextApprox(squareRoot, approximate) {
     return (approximate + squareRoot / approximate) / 2;
 };
 
@@ -48,7 +48,7 @@ function getFormula(squareRoot, approximate) {
 };
 
 function getErrorRate(squareRoot, approximate) {
-    return Number(getApprox(squareRoot, approximate) - approximate).toFixed(10);
+    return Number(getNextApprox(squareRoot, approximate) - approximate).toFixed(10);
 };
 
 function generateTableRow(iteration, formula, approximate, errorRate) {
