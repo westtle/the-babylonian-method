@@ -1,6 +1,7 @@
 // HTML.
 const squareRootInput = document.querySelector(".inputs__square-root");
 const initialGuessInput = document.querySelector(".inputs__initial-guess");
+const accuracyInput = document.querySelector(".inputs__accuracy");
 
 const resultSection = document.querySelector(".result");
 const resultHeader = document.querySelector(".result__header");
@@ -13,8 +14,9 @@ function estimate() {
     const initialGuess = Number(initialGuessInput.value);
 
     let iteration = 0;
+    
     let errorRate;
-    const accuracy = 0.0001;
+    const accuracy = accuracyInput.value == "" ? 0.0001 : Number(accuracyInput.value);
 
     let approximate = initialGuess;
 
