@@ -54,7 +54,7 @@ main { align-self: stretch; }
 .estimate,
 .result,
 .attribution {
-    max-width: 23.4375rem;
+    max-width: 23.75rem;
     margin: 0 auto;
 }
 
